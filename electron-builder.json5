@@ -1,0 +1,53 @@
+{
+    appId: 'freewsy.tanhong.cc',
+    asar: true,
+    icon: 'public/favicon.ico',
+    directories: {
+        output: 'release/${version}',
+    },
+    files: ['dist-electron', 'dist'],
+    productName: 'freewsy',
+    dmg: {
+        background: 'public/mac-install-bg.png',
+        contents: [
+            {
+                x: 410,
+                y: 190,
+                type: 'link',
+                path: '/Applications',
+            },
+            {
+                x: 130,
+                y: 190,
+                type: 'file',
+            },
+        ],
+        window: {
+            height: 380,
+            width: 540,
+        },
+    },
+    nsis: {
+        include: 'build/installer.nsh',
+        oneClick: false,
+        perMachine: true,
+        allowElevation: false,
+        allowToChangeInstallationDirectory: true,
+        deleteAppDataOnUninstall: true,
+        createDesktopShortcut: true,
+        createStartMenuShortcut: true,
+    },
+    win: {
+        target: [
+            {
+                target: 'nsis',
+                arch: ['x64'],
+            },
+        ],
+        artifactName: '${productName}_${version}.${ext}',
+    },
+    mac: {
+        artifactName: '${productName}_${version}.${ext}',
+        target: ['dmg', 'zip'],
+    },
+}

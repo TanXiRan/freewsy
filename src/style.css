@@ -1,0 +1,86 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #747bff;
+}
+
+ul {
+    list-style: none;
+    outline: none;
+    appearance: none;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--mainbg);
+}
+
+body[color-theme='dark'] {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    --headerbg: #222;
+    --headertabhoverbg: #393838;
+    --sidebarbg: #242424;
+    --sidebaropthoverbg: #393838;
+    --chapterbg: #272727;
+    --chapterhoverbg: #202020;
+    --mainbg: #1d1d1d;
+    --wordbg: #4d4b4b;
+    /* 在暗模式下应用的样式 */
+
+    --gameinputborder: #f1f1f1;
+    --gameinputcaret: #f1f1f1;
+    --gamenextbtn: #444040;
+    --jiamingcellbg: #272727;
+    --jiamingcellborder: transparent;
+    --jiamingsideoption: #4d4b4b;
+    --jiamingoption: #232222;
+}
+
+body {
+    color: #213547;
+    background-color: #ffffff;
+    --headerbg: #fff;
+    --headertabhoverbg: #f2f2f5;
+    --sidebarbg: #ffff;
+    --sidebaropthoverbg: #f2f3f5;
+    --chapterbg: #ffff;
+    --chapterhoverbg: #f9f9f9;
+    --mainbg: #f7f7f7;
+    --wordbg: #f6f5f5;
+    --btnbg: #2e51fe;
+    --gameinputborder: #171616;
+    --gameinputcaret: inherit;
+    --gamenextbtn: #171717;
+    --jiamingcellbg: #f8f8f8;
+    --jiamingcellborder: #535252;
+    --jiamingsideoption: #e8e6e6;
+    --jiamingoption: #e8e6e6;
+}
