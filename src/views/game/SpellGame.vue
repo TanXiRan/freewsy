@@ -22,8 +22,8 @@
                 </div>
             </div>
         </div>
-        <a-button @click="finishGame">end</a-button>
-        <a-button @click="score++">plus</a-button>
+        <!-- <a-button @click="finishGame">end</a-button>
+        <a-button @click="score++">plus</a-button> -->
         <div class="actions">
             <button @click="startGame" v-if="!isPlaying" class="start-game">开始测试</button>
             <button @click="endGame" v-if="isPlaying && !isFinish" class="end-game">结束</button>
