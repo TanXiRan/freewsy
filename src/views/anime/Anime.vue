@@ -25,10 +25,16 @@ const animeCategories = [
         name: '全部',
     },
     {
-        name: '科幻',
+        name: '校园',
     },
     {
         name: '音乐',
+    },
+    {
+        name: '治愈',
+    },
+    {
+        name: '科幻',
     },
 ]
 

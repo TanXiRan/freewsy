@@ -96,7 +96,7 @@ header {
     justify-content: space-between;
     text-align: center;
     &.fixed {
-        box-shadow: -6px -11px 20px 8px rgba(0, 0, 0, 0.6);
+        box-shadow: -6px -11px 20px 8px rgba(0, 0, 0, 0.4);
     }
 
     .site-icon {

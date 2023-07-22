@@ -1,5 +1,6 @@
 <template>
-    <div class="anime" @click="handleClick">
+    <!-- <div class="anime" @click="handleClick"> -->
+    <div class="anime">
         <div class="poster">
             <img :src="anime.poster" alt="" />
         </div>
@@ -16,7 +17,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { updateUser } from '@/request/api'
-import { successNotify, infoNotify } from '@/plugin/notification'
+import { successNotify, infoNotify, errorNotify } from '@/plugin/notification'
 import { useUserStore } from '@/stores'
 import { Anime } from '@/types'
 
@@ -34,11 +35,20 @@ const liked = ref(false)
 const thumed = ref(false)
 
 const handleThume = () => {
+    if (!userStore.username) {
+        errorNotify('请先登录！')
+        return
+    }
+    console.log(userStore.username)
     thumed.value = !thumed.value
     infoNotify('注意', '点赞成功！')
 }
 
 const handleLike = async (id: number) => {
+    if (!userStore.username) {
+        errorNotify('请先登录！')
+        return
+    }
     const res = await updateUser(userStore.user.id!, {
         anime: [id],
     })

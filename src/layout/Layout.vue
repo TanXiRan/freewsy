@@ -4,7 +4,7 @@
         <main>
             <router-view v-slot="{ Component }">
                 <transition name="fade" mode="out-in">
-                    <KeepAlive :include="['Home', 'SpellGame', 'JiaMingBiao', 'Animee', 'Anime']" :max="5">
+                    <KeepAlive :include="['Home', 'JiaMingBiao', 'Anime']" :max="5">
                         <component :is="Component" />
                     </KeepAlive>
                 </transition>

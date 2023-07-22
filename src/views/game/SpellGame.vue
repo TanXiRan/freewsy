@@ -126,22 +126,28 @@ onMounted(async () => {
     // 监听键盘快捷键
     document.onkeydown = function (event) {
         const keyCode = event.keyCode
+        // t
         if (keyCode === 84 && event.shiftKey) {
             event.preventDefault() //关闭浏览器默认快捷键
             startGame()
         } else if (keyCode === 83 && event.shiftKey && !error.value) {
+            // s
             event.preventDefault()
             handleNext(true)
         } else if (keyCode === 69 && event.shiftKey) {
+            // e
             event.preventDefault()
             endGame()
         } else if (keyCode === 80 && event.shiftKey) {
+            // p
             event.preventDefault()
             pauseGame()
         } else if (keyCode === 67 && event.shiftKey) {
+            // c
             event.preventDefault()
             continueGame()
         } else if (keyCode === 78 && error.value && event.shiftKey) {
+            // n
             event.preventDefault()
             handleNext(false)
         }
@@ -248,7 +254,8 @@ const continueGame = () => {
 // 结束测试
 const endGame = async () => {
     timer.stopCount()
-    showFinshModal.value = true
+    finishGame()
+    // showFinshModal.value = true
 }
 
 // 完成测试
