@@ -5,7 +5,7 @@
             <img :src="anime.poster" alt="" />
         </div>
         <div class="info">
-            <h3>{{ anime.name }}</h3>
+            <h3>{{ anime.name }}这是第二版</h3>
             <div class="actions">
                 <icon-thumb-up @click="handleThume" :class="thumed ? 'active-btn' : ''" class="thume" />
                 <icon-heart @click="handleLike(anime.id)" :class="userStore.animes.indexOf(anime.id) !== -1 ? 'active-btn' : ''" class="like" />
