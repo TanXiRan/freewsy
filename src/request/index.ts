@@ -4,8 +4,8 @@ import axios, { AxiosHeaders, AxiosError } from 'axios'
 
 const instance = axios.create({
     // baseURL: isDevelopment ? '/v3' : 'http://www.tanhong.cc/v3/',
-    // baseURL: '/v3',
-    baseURL: 'http://www.tanhong.cc/v3/',
+    baseURL: '/v3',
+    // baseURL: 'http://www.tanhong.cc/v3/',
     timeout: 10000,
 })
 

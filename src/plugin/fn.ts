@@ -1,6 +1,6 @@
 const formatUrl = (baseUrl: string | undefined) => {
-    return baseUrl ? `http://www.tanhong.cc${baseUrl}` : '#'
-    // return baseUrl ? `http://127.0.0.1:8000${baseUrl}` : '#'
+    // return baseUrl ? `http://www.tanhong.cc${baseUrl}` : '#'
+    return baseUrl ? `http://127.0.0.1:8000${baseUrl}` : '#'
 }
 // return baseUrl ? `http://127.0.0.1:8000${baseUrl}` : '#'
 // function awaitWrap<T, U = any>(

@@ -95,16 +95,16 @@ export default defineConfig({
         }),
     ],
 
-    // server: isDevelopment
-    //     ? {
-    //           proxy: {
-    //               '/v3': {
-    //                   target: pkg.debug.env.VITE_DEV_SERVER_URL,
-    //                   changeOrigin: true,
-    //               },
-    //           },
-    //       }
-    //     : {},
+    server: isDevelopment
+        ? {
+              proxy: {
+                  '/v3': {
+                      target: pkg.debug.env.VITE_DEV_SERVER_URL,
+                      changeOrigin: true,
+                  },
+              },
+          }
+        : {},
 
     // server: {
     //     proxy: {

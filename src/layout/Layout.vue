@@ -1,7 +1,8 @@
 <template>
     <div class="layout">
         <Header />
-        <main>
+        <div class="xxxx" v-if="netError">xsaadsdasdadass</div>
+        <main v-else>
             <router-view v-slot="{ Component }">
                 <transition name="fade" mode="out-in">
                     <KeepAlive :include="['Home', 'JiaMingBiao', 'Anime']" :max="5">
@@ -15,6 +16,18 @@
 
 <script setup lang="ts">
 import Header from './header/Header.vue'
+import { ref } from 'vue'
+import { useGlobleStore } from '@/stores'
+import { watchEffect } from 'vue'
+
+const netError = ref<boolean>(false)
+watchEffect(() => {
+    if (store.netError) {
+        netError.value = true
+    }
+})
+
+const store = useGlobleStore()
 </script>
 
 <style scoped>

@@ -26,7 +26,7 @@ import profile from './profile.vue'
 import { ref, onMounted, onBeforeUnmount, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 
-const isFixed = ref(true)
+const isFixed = ref(false)
 
 const route = useRoute()
 const tabItems = ref([

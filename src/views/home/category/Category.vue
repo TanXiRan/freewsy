@@ -97,7 +97,7 @@ getCategory()
     max-width: 200px;
     width: 16%;
     background-color: var(--sidebarbg);
-    height: calc(100vh - 84px);
+    min-height: calc(100vh - 84px);
     padding: 20px;
     margin-right: 14px;
 }
